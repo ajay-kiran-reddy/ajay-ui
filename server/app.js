@@ -12,8 +12,16 @@ app.use(express.json({ extended: false }));
 // Connect Database
 
 app.get("/", (req, res) => res.send("Hello world!"));
-app.use("/api/todos", todos);
-app.use("/api/auth", Auth);
-const port = process.env.PORT || 8082;
+app.use("/todos", todos);
+app.use("/auth", Auth);
+
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+ app.use(express.static('client/build'));
+ app.get('*', (req, res) => {
+ res.sendFile(path.join(__dirname + '/client/build/index.html'));
+ });
+}
