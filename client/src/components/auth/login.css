@@ -1,0 +1,22 @@
+.containers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.leftDiv {
+  background-color: #3454db;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightDiv {
+  min-height: 100vh;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
