@@ -12,8 +12,8 @@ app.use(express.json({ extended: false }));
 // Connect Database
 
 app.get("/", (req, res) => res.send("Hello world!"));
-app.use("/todos", todos);
-app.use("/auth", Auth);
+app.use("api/todos", todos);
+app.use("api/auth", Auth);
 
 const port = process.env.PORT || 5000;
 
