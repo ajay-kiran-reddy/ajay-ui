@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "ajay-ui",
+  "homepage": "https://ajay-ui-ajay-kiran-reddy.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
